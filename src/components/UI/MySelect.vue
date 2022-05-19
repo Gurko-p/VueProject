@@ -6,23 +6,22 @@
 </template>
 
 <script>
-    export default {
-        name: 'my-select',
-        props:{
-            type: String,
-        },
-        options:{
+export default {
+    name: 'my-select',
+    props: {
+        type: String,
+        options: {
             type: Array,
             default: () => []
         },
-        methods:{
-            changeOption(option){
-                this.$emit('update:modelValue', option)
-            }
+    },
+    methods: {
+        changeOption(event) {
+            this.$emit('update:modelValue', event.target.value)
         }
     }
+}
 </script>
 
 <style scoped>
-
 </style>
