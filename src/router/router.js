@@ -2,6 +2,7 @@ import MainPage from '@/pages/MainPage'
 import PostsPage from '@/pages/PostsPage'
 import AboutPage from '@/pages/AboutPage'
 import PostIdPage from '@/pages/PostIdPage'
+import PostsPageWithVuex from '@/pages/PostsPageWithVuex'
 
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -21,6 +22,10 @@ const routes = [
     {
         path: '/posts/:id',
         component: PostIdPage
+    },
+    {
+        path: '/store',
+        component: PostsPageWithVuex
     }
 ]
 
